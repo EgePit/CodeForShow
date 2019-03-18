@@ -1,0 +1,2 @@
+<?php
+$route['default'] = '/home';
