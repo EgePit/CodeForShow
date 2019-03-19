@@ -3,7 +3,7 @@ namespace Core\Abstracts;
 
 use Core\View;
 
-abstract class BaseController extends Initial
+abstract class BaseController
 {
     protected $db;
     protected $view;

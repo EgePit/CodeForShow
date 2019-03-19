@@ -1,6 +1,8 @@
 <?php
 namespace Core\Abstracts;
 
+use Core\Config;
+
 abstract class Model
 {
     protected $connection = null;
@@ -15,10 +17,10 @@ abstract class Model
     protected function connect()
     {
         $this->connection = mysqli_connect(
-            \Core\Config::getInstance()->getParameter('db_host'),
-            \Core\Config::getInstance()->getParameter('db_user'),
-            \Core\Config::getInstance()->getParameter('db_password'),
-            \Core\Config::getInstance()->getParameter('db_name')
+            Config::getInstance()->getParameter('db_host'),
+            Config::getInstance()->getParameter('db_user'),
+            Config::getInstance()->getParameter('db_password'),
+            Config::getInstance()->getParameter('db_name')
         );
         return;
 
