@@ -60,6 +60,10 @@ final class Route
 
     public function call() : void
     {
-        call_user_func_array(array($this->controller, $this->method), $this->params);
+        try {
+            call_user_func_array(array($this->controller, $this->method), $this->params);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
     }
 }

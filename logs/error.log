@@ -1,0 +1,9 @@
+
+[2019-03-19 13:46:03] fatal [SHUTDOWN] lvl:1 | msg:Uncaught ArgumentCountError: Too few arguments to function Controllers\Home::index(), 0 passed and exactly 4 expected in /var/www/html/auth/app/Controllers/Home.php:9
+Stack trace:
+#0 [internal function]: Controllers\Home->index()
+#1 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#2 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#3 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#4 {main}
+  thrown | file:/var/www/html/auth/app/Controllers/Home.php | ln:9

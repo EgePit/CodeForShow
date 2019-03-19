@@ -1,11 +1,6 @@
 <?php
-include_once('../includes/constants.php');
-$basePath = dirname(__FILE__).DIRECTORY_SEPARATOR.'..';
 
-define('APP_PATH', $basePath.'/classes/');
-define('MODELS_PATH', $basePath.DIRECTORY_SEPARATOR.'/classes/models/');
-define('FRONT_PATH', $basePath.DIRECTORY_SEPARATOR.'/view/');
-define('INCLUDES_PATH', $basePath.DIRECTORY_SEPARATOR.'/includes/');
+include_once('../includes/constants.php');
 
 spl_autoload_register(function($name) {
     $name = str_replace('\\', '/', $name);
@@ -16,6 +11,8 @@ spl_autoload_register(function($name) {
     }
     throw new Exception("Class $name can't be loaded");
 });
+
+(new \Core\Handlers\ErrorsHandler());
 
 try {
     $route = new \Core\Route($_SERVER['REQUEST_URI']);
