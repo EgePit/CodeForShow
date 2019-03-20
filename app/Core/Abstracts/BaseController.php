@@ -10,7 +10,6 @@ abstract class BaseController
 
     function __construct()
     {
-        parent::__construct();
         $this->view = new View();
     }
 }

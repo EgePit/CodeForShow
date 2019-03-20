@@ -1,9 +1,173 @@
 
-[2019-03-19 13:46:03] fatal [SHUTDOWN] lvl:1 | msg:Uncaught ArgumentCountError: Too few arguments to function Controllers\Home::index(), 0 passed and exactly 4 expected in /var/www/html/auth/app/Controllers/Home.php:9
+[2019-03-20 15:30:27] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Cannot access parent:: when current class scope has no parent in /var/www/html/auth/app/Core/Abstracts/BaseController.php:13
 Stack trace:
-#0 [internal function]: Controllers\Home->index()
+#0 /var/www/html/auth/app/Core/Route.php(57): Core\Abstracts\BaseController->__construct()
+#1 /var/www/html/auth/app/Core/Route.php(26): Core\Route->setController('Home')
+#2 /var/www/html/auth/app/Core/Route.php(19): Core\Route->setMainParameters(Array)
+#3 /var/www/html/auth/app/Core/Route.php(29): Core\Route->parseRequest('/home')
+#4 /var/www/html/auth/app/Core/Route.php(19): Core\Route->setMainParameters(Array)
+#5 /var/www/html/auth/app/Core/Route.php(12): Core\Route->parseRequest('/')
+#6 /var/www/html/auth/public/index.php(18): Core\Route->__construct('/')
+#7 {main}
+  thrown | file:/var/www/html/auth/app/Core/Abstracts/BaseController.php | ln:13
+[2019-03-20 15:30:27] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:30:28] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:37:08] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Cannot access parent:: when current class scope has no parent in /var/www/html/auth/app/Core/Abstracts/BaseController.php:13
+Stack trace:
+#0 /var/www/html/auth/app/Core/Route.php(57): Core\Abstracts\BaseController->__construct()
+#1 /var/www/html/auth/app/Core/Route.php(26): Core\Route->setController('Home')
+#2 /var/www/html/auth/app/Core/Route.php(19): Core\Route->setMainParameters(Array)
+#3 /var/www/html/auth/app/Core/Route.php(29): Core\Route->parseRequest('/home')
+#4 /var/www/html/auth/app/Core/Route.php(19): Core\Route->setMainParameters(Array)
+#5 /var/www/html/auth/app/Core/Route.php(12): Core\Route->parseRequest('/')
+#6 /var/www/html/auth/public/index.php(18): Core\Route->__construct('/')
+#7 {main}
+  thrown | file:/var/www/html/auth/app/Core/Abstracts/BaseController.php | ln:13
+[2019-03-20 15:37:09] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:37:11] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Cannot access parent:: when current class scope has no parent in /var/www/html/auth/app/Core/Abstracts/BaseController.php:13
+Stack trace:
+#0 /var/www/html/auth/app/Core/Route.php(57): Core\Abstracts\BaseController->__construct()
+#1 /var/www/html/auth/app/Core/Route.php(26): Core\Route->setController('Home')
+#2 /var/www/html/auth/app/Core/Route.php(19): Core\Route->setMainParameters(Array)
+#3 /var/www/html/auth/app/Core/Route.php(12): Core\Route->parseRequest('/home/index/tab...')
+#4 /var/www/html/auth/public/index.php(18): Core\Route->__construct('/home/index/tab...')
+#5 {main}
+  thrown | file:/var/www/html/auth/app/Core/Abstracts/BaseController.php | ln:13
+[2019-03-20 15:37:13] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:37:44] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:39:07] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:45:29] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:45:53] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 15:52:49] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 16:02:27] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 16:03:18] info lvl: 8 | msg:Undefined index: Name | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:107
+[2019-03-20 16:03:18] info lvl: 8 | msg:Undefined index: Population | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:107
+[2019-03-20 16:03:19] info lvl: 8 | msg:Undefined index: Name | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:107
+[2019-03-20 16:03:19] info lvl: 8 | msg:Undefined index: Population | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:107
+[2019-03-20 16:03:20] info lvl: 8 | msg:Undefined index: Name | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:107
+[2019-03-20 16:03:20] info lvl: 8 | msg:Undefined index: Population | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:107
+[2019-03-20 16:03:25] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 16:03:35] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:14:59] fatal [SHUTDOWN] lvl:1 | msg:Class Core\ActiveRecords contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Core\Interfaces\IActiveRecords::or_where, Core\Interfaces\IActiveRecords::join) | file:/var/www/html/auth/app/Core/ActiveRecords.php | ln:6
+[2019-03-20 17:15:00] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:16:01] fatal [SHUTDOWN] lvl:1 | msg:Class Core\ActiveRecords contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Core\Interfaces\IActiveRecords::or_where, Core\Interfaces\IActiveRecords::join) | file:/var/www/html/auth/app/Core/ActiveRecords.php | ln:6
+[2019-03-20 17:16:02] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:17:11] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:18:12] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Call to a member function from() on null in /var/www/html/auth/app/Core/Abstracts/Model.php:106
+Stack trace:
+#0 /var/www/html/auth/app/Controllers/Home.php(11): Core\Abstracts\Model->all()
+#1 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#2 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#3 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#4 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#5 {main}
+  thrown | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:106
+[2019-03-20 17:18:14] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:49:08] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:49:10] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Cannot call constructor in /var/www/html/auth/app/Models/Users.php:16
+Stack trace:
+#0 /var/www/html/auth/app/Controllers/Home.php(11): Models\Users->__construct()
+#1 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#2 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#3 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#4 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#5 {main}
+  thrown | file:/var/www/html/auth/app/Models/Users.php | ln:16
+[2019-03-20 17:49:11] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:50:57] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Cannot call constructor in /var/www/html/auth/app/Models/Users.php:16
+Stack trace:
+#0 /var/www/html/auth/app/Controllers/Home.php(11): Models\Users->__construct()
+#1 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#2 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#3 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#4 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#5 {main}
+  thrown | file:/var/www/html/auth/app/Models/Users.php | ln:16
+[2019-03-20 17:50:58] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:51:44] fatal [SHUTDOWN] lvl:64 | msg:A void function must not return a value | file:/var/www/html/auth/app/Core/QueryBuilder.php | ln:19
+[2019-03-20 17:51:46] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:52:59] fatal [SHUTDOWN] lvl:64 | msg:Declaration of Core\QueryBuilder::get() must be compatible with Core\Interfaces\IQueryBuilder::get(): string | file:/var/www/html/auth/app/Core/QueryBuilder.php | ln:6
+[2019-03-20 17:53:00] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:53:39] fatal [SHUTDOWN] lvl:64 | msg:Access level to Core\Database::connect() must be public (as in class Core\Interfaces\IDatabase) | file:/var/www/html/auth/app/Core/Database.php | ln:7
+[2019-03-20 17:53:40] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:54:15] warn lvl: 2 | msg:mysqli::query(): Empty query | file:/var/www/html/auth/app/Core/Database.php | ln:33
+[2019-03-20 17:54:15] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Call to a member function fetch_all() on boolean in /var/www/html/auth/app/Core/Database.php:33
+Stack trace:
+#0 /var/www/html/auth/app/Core/Abstracts/Model.php(103): Core\Database->results()
+#1 /var/www/html/auth/app/Controllers/Home.php(11): Core\Abstracts\Model->all()
+#2 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#3 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#4 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#5 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#6 {main}
+  thrown | file:/var/www/html/auth/app/Core/Database.php | ln:33
+[2019-03-20 17:54:16] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:55:46] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:56:42] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:56:43] fatal [SHUTDOWN] lvl:1 | msg:Class Models\Users contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (Core\Interfaces\IModel::setTable) | file:/var/www/html/auth/app/Models/Users.php | ln:6
+[2019-03-20 17:56:44] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:57:14] fatal [SHUTDOWN] lvl:1 | msg:Uncaught TypeError: Return value of Core\Abstracts\Model::all() must be of the type array, object returned in /var/www/html/auth/app/Core/Abstracts/Model.php:113
+Stack trace:
+#0 /var/www/html/auth/app/Controllers/Home.php(11): Core\Abstracts\Model->all()
+#1 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#2 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#3 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#4 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#5 {main}
+  thrown | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:113
+[2019-03-20 17:57:15] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:58:42] fatal [SHUTDOWN] lvl:1 | msg:Uncaught TypeError: Return value of Core\Abstracts\Model::all() must be of the type array, object returned in /var/www/html/auth/app/Core/Abstracts/Model.php:113
+Stack trace:
+#0 /var/www/html/auth/app/Controllers/Home.php(11): Core\Abstracts\Model->all()
+#1 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#2 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#3 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#4 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#5 {main}
+  thrown | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:113
+[2019-03-20 17:58:44] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 17:58:45] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Call to undefined method mysqli_result::mysql_fetch_assoc() in /var/www/html/auth/app/Core/Database.php:33
+Stack trace:
+#0 /var/www/html/auth/app/Core/Abstracts/Model.php(104): Core\Database->results()
+#1 /var/www/html/auth/app/Controllers/Home.php(11): Core\Abstracts\Model->all()
+#2 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#3 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#4 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#5 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#6 {main}
+  thrown | file:/var/www/html/auth/app/Core/Database.php | ln:33
+[2019-03-20 17:58:46] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:00:57] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:01:11] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:01:12] fatal [SHUTDOWN] lvl:1 | msg:Uncaught Error: Call to a member function close() on array in /var/www/html/auth/app/Core/Database.php:34
+Stack trace:
+#0 /var/www/html/auth/app/Core/Abstracts/Model.php(104): Core\Database->results()
+#1 /var/www/html/auth/app/Controllers/Home.php(11): Core\Abstracts\Model->all()
+#2 [internal function]: Controllers\Home->index('table', 'car', 'mobile', '2')
+#3 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
+#4 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
+#5 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
+#6 {main}
+  thrown | file:/var/www/html/auth/app/Core/Database.php | ln:34
+[2019-03-20 18:01:13] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:03:20] info lvl: 8 | msg:Trying to get property 'result' of non-object | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:104
+[2019-03-20 18:03:20] warn lvl: 2 | msg:Invalid argument supplied for foreach() | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:108
+[2019-03-20 18:04:26] info lvl: 8 | msg:Trying to get property 'result' of non-object | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:104
+[2019-03-20 18:04:26] warn lvl: 2 | msg:Invalid argument supplied for foreach() | file:/var/www/html/auth/app/Core/Abstracts/Model.php | ln:108
+[2019-03-20 18:04:38] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:08:00] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:08:20] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:10:30] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:10:42] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:10:45] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:10:55] fatal [SHUTDOWN] lvl:1 | msg:Uncaught ArgumentCountError: Too few arguments to function Controllers\Home::test(), 0 passed and exactly 4 expected in /var/www/html/auth/app/Controllers/Home.php:19
+Stack trace:
+#0 [internal function]: Controllers\Home->test()
 #1 /var/www/html/auth/app/Core/Route.php(64): call_user_func_array(Array, Array)
 #2 /var/www/html/auth/app/Core/Main.php(8): Core\Route->call()
 #3 /var/www/html/auth/public/index.php(19): Core\Main->__construct(Object(Core\Route))
 #4 {main}
-  thrown | file:/var/www/html/auth/app/Controllers/Home.php | ln:9
+  thrown | file:/var/www/html/auth/app/Controllers/Home.php | ln:19
+[2019-03-20 18:10:56] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:11:09] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64
+[2019-03-20 18:11:17] warn lvl: 2 | msg:call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object | file:/var/www/html/auth/app/Core/Route.php | ln:64

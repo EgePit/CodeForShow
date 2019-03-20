@@ -5,7 +5,7 @@ class FileHandler
 {
     static $file;
 
-    static function openFile($filename)
+    static protected function openFile($filename)
     {
         self::$file = fopen($filename, "a");
     }
@@ -17,7 +17,7 @@ class FileHandler
         self::fileClose();
     }
 
-    static function fileClose()
+    static protected function fileClose()
     {
         fclose(self::$file);
     }

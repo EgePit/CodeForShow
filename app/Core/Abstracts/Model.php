@@ -1,35 +1,15 @@
 <?php
 namespace Core\Abstracts;
 
-use Core\Config;
+use Core\Database;
+use Core\QueryBuilder;
+use Core\Interfaces\IModel;
 
-abstract class Model
+abstract class Model implements IModel
 {
-    protected $connection = null;
-    protected $table;
-    protected $primaryKey = 'id';
-
-    function __construct()
+    protected function setProperty($key, $value)
     {
-        $this->connect();
-    }
-
-    protected function connect()
-    {
-        $this->connection = mysqli_connect(
-            Config::getInstance()->getParameter('db_host'),
-            Config::getInstance()->getParameter('db_user'),
-            Config::getInstance()->getParameter('db_password'),
-            Config::getInstance()->getParameter('db_name')
-        );
-        return;
-
-        throw new \Exception('DB connection error');
-    }
-
-    function __destruct()
-    {
-        mysqli_close($this->connection);
+        $this->$key = $value;
     }
 
     public function setPrimaryKey()
@@ -92,9 +72,27 @@ abstract class Model
 
     }
 
-    public function all()
+    public function all(array $columns=['*']) : array
     {
-        return $this;
+        $query = new QueryBuilder();
+        $query->select($columns);
+        $query->from('Users');
+        $query->buidQuery();
+        $db = new Database($query);
+        $results = $db->results();
+
+        $list = [];
+
+        foreach($results as $result) {
+            $model = new static();
+            foreach($result as $key=> $value)
+            {
+                $model->setProperty($key, $value);
+            }
+            $list[] = $model;
+        }
+
+        return $list;
     }
 
     public function find()
